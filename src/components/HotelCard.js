@@ -9,11 +9,21 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 const HotelCard = ({ title, rooms, price, imgSrc }) => {
+
+
+
+    const allData = () => {
+        console.log(title);
+        console.log(rooms);
+        console.log(price);
+        console.log(imgSrc);
+    }
+
     return (
         <Card>
             <CardMedia
                 component="img"
-                height="140"
+                height="200"
                 image={imgSrc}
                 alt="green iguana"
             />
@@ -23,17 +33,19 @@ const HotelCard = ({ title, rooms, price, imgSrc }) => {
                 </Typography>
                 <hr />
                 <div style={{display: "flex", justifyContent: "space-between"}}>
-                <Typography variant="h5">
+                <Typography variant="h6">
+                    <small style={{color: '#666'}}>No. of Rooms </small>
                    {rooms}
                 </Typography>
-                <Typography variant="h5">
-                   {price}
+                <Typography variant="h6">
+                    <small style={{color: '#666'}}>Price: </small>
+                   {price}/Day
                 </Typography>
                 </div>
             </CardContent>
             <CardActions>
                 {/* <Button size="small">Share</Button> */}
-                <Button variant="contained">Book Now</Button>
+                <Button onClick={()=>{allData()}} variant="contained">Book Now</Button>
             </CardActions>
         </Card>
     )

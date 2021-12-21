@@ -70,13 +70,13 @@ const Home = () => {
                 Home Page
             </h1>
             {/* <button className="btn btn-secondary btn-block mt-4" onClick={handleAuth} type='button'>Logout</button> */}
-            <Container class="mt-4">
+            <Container className="mt-4">
                 <Row>
                     {
                         dbData.map((item, index) => {
                             // console.log(item);
                             return (
-                                <Col lg={4} md={6} sm={12} key={index} >
+                                <Col lg={4} md={6} sm={12} key={index} className="my-4" >
                                     <HotelCard title={item.hotelName} rooms={item.hotelRooms} price={item.hotelPrice} imgSrc={item.hotelImg} />
                                 </Col>
                             )

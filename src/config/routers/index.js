@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import UserRoute from "../../components/UserRoute";
-import { Home, Dashboard, Login, Signup } from "./appRouter";
+import { Home, Dashboard, Login, Signup, Hotels } from "./appRouter";
 import Routers from "../../components/Routers";
 
 export default function AppRouter() {
@@ -15,6 +15,7 @@ export default function AppRouter() {
                     <Route path='/login' element={<Login />} />
                     <Route path='/signup' element={<Signup />} />
                     <Route path='/dashboard' element={<Dashboard />} />
+                    <Route path='/hotels' element={<Hotels />} />
                 </Routes>
             </Router>
 
